@@ -2,8 +2,8 @@
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
-  'NAME' => 'Date::Holidays::AT',
-  'VERSION_FROM' => 'lib/Date/Holidays/AT.pm',
+  'NAME' => 'Date::Holidays::CH',
+  'VERSION_FROM' => 'lib/Date/Holidays/CH.pm',
   'PREREQ_PM' => {
                    'Date::Calc' => '5.0',
                    'Test::More' => 0,

@@ -1,7 +1,7 @@
-Date::Holidays::AT
+Date::Holidays::CH
 ==================
 
-This module creates a list of Austrian holidays in a given year.
+This module creates a list of Swiss holidays in a given year.
 
 Holidays that occur on weekends can be excluded from the generated list.
 
@@ -37,13 +37,14 @@ This module requires these other modules and libraries:
 
 AUTHOR
 
-Matthias Dietrich <perl@rainboxx.de>
+Michael Herrmann <michael@herrmann.io>
 
 
 ACKNOWLEDGEMENTS
 
-Thanks to Martin Schmitt <mas at scsy dot de>. Date::Holidays::AT
-is based on his Date::Holidays::DE.
+Thanks to Matthias Dietrich <perl at rainboxx dot de> and Martin Schmitt
+<mas at scsy dot de>. Date::Holidays::CH is based on their Date::Holidays::AT
+and Date::Holidays::DE.
 
 
 COPYRIGHT AND LICENSE

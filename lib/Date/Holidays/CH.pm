@@ -1,4 +1,4 @@
-package Date::Holidays::AT;
+package Date::Holidays::CH;
 
 use warnings;
 use strict;
@@ -14,7 +14,7 @@ require Exporter;
 
 our @ISA       = qw(Exporter);
 our @EXPORT_OK = qw(holidays);
-use version; our $VERSION = qv("0.1.3");
+use version; our $VERSION = qv("0.1.0");
 
 sub holidays {
     my %parameters = (
@@ -59,7 +59,7 @@ sub holidays {
     $holiday{'neuj'} = _date2timestamp($year, 1,  1);     # New year's day
     $holiday{'hl3k'} = _date2timestamp($year, 1,  6);     # Heilige 3 Koenige
     $holiday{'jose'} = _date2timestamp($year, 3,  19);    # Josef
-    $holiday{'tdar'} = _date2timestamp($year, 5,  1);     # Staatsfeiertag (Tag der Arbeit)
+    $holiday{'tdar'} = _date2timestamp($year, 8,  1);     # Staatsfeiertag (Tag der Arbeit)
     $holiday{'flor'} = _date2timestamp($year, 5,  4);     # Florian
     $holiday{'mahi'} = _date2timestamp($year, 8,  15);    # Mariae Himmelfahrt
     $holiday{'rupe'} = _date2timestamp($year, 9,  24);    # Rupert
@@ -96,7 +96,7 @@ sub holidays {
     my ($j_fron, $m_fron, $t_fron) = Date::Calc::Add_Delta_Days($year, $month, $day, 60);
     $holiday{'fron'} = _date2timestamp($j_fron, $m_fron, $t_fron);
 
-    # Common holidays througout Austria
+    # Common holidays througout Switzerland
     @{ $holidays{'common'} } = qw(neuj hl3k tdar mahi nati alhe mart maem chri stef);
 
     # Build list for returning
@@ -161,22 +161,22 @@ sub _date2timestamp {
 1;
 __END__
 
-1; # End of code Date::Holidays::AT
+1; # End of code Date::Holidays::CH
 
 =head1 NAME
 
-Date::Holidays::AT - Determine Austrian holidays
+Date::Holidays::CH - Determine Swiss holidays
 
 =head1 SYNOPSIS
 
-  use Date::Holidays::AT qw(holidays);
+  use Date::Holidays::CH qw(holidays);
   my $feiertage_ref = holidays();
   my @feiertage     = @$feiertage_ref;
 
 =head1 DESCRIPTION
 
 This module exports a single function named B<holidays()> which returns a list of 
-Austrian holidays in a given year. 
+Swiss holidays in a given year. 
 
 =head1 KNOWN HOLIDAYS
 
@@ -299,22 +299,23 @@ holidays as UNIX timestamps (seconds since The Epoch) to allow for more
 flexible formatting. This limits the range of years to work on to 
 the years from 1972 to 2037. 
 
-B<Date::Holidays::AT> doesn't know anything about past holiday regulations.
+B<Date::Holidays::CH> doesn't know anything about past holiday regulations.
 
-B<Date::Holidays::AT> is not configurable. Holiday changes don't come over
+B<Date::Holidays::CH> is not configurable. Holiday changes don't come over
 night and a new module release can be rolled out within a single day.
 
-B<Date::Holidays::AT> probably won't work in Microsoft's "Windows" operating 
+B<Date::Holidays::CH> probably won't work in Microsoft's "Windows" operating 
 environment.
 
 =head1 ACKNOWLEDGEMENTS
 
-Thanks to Martin Schmitt E<lt>mas at scsy dot deE<gt>. B<Date::Holidays::AT>
-is based on B<Date::Holidays::DE>.
+Thanks to Matthias Dietrich E<lt>perl at rainboxx dot deE<gt> and Martin Schmitt 
+E<lt>mas at scsy dot deE<gt>. B<Date::Holidays::CH> is based on their
+B<Date::Holidays::AT> and B<Date::Holidays::DE>.
 
 =head1 AUTHOR
 
-Matthias Dietrich E<lt>perl@rainboxx.deE<gt>
+Michael Herrmann E<lt>michael@herrmann.ioE<gt>
 
 =head1 SEE ALSO
 

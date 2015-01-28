@@ -1,7 +1,7 @@
 Build.PL
 Changes
 lib/.DS_Store
-lib/Date/Holidays/AT.pm
+lib/Date/Holidays/CH.pm
 Makefile.PL
 MANIFEST			This list of files
 META.yml

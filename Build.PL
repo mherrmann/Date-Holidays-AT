@@ -3,23 +3,23 @@ use warnings;
 use Module::Build;
 
 my $builder = Module::Build->new(
-    module_name       => 'Date::Holidays::AT',
+    module_name       => 'Date::Holidays::CH',
     license           => 'perl',
-    dist_author       => 'Matthias Dietrich <perl@rainboxx.de>',
-    dist_version_from => 'lib/Date/Holidays/AT.pm',
+    dist_author       => 'Michael Herrmann <michael@herrmann.io>',
+    dist_version_from => 'lib/Date/Holidays/CH.pm',
     build_requires    => {
                   'Date::Calc' => '5.0',
                   'Test::More' => 0,
                   'version'    => 0,
                 },
     configure_requires => { 'Module::Build' => 0.36 },
-    add_to_cleanup => ['Date-Holidays-AT-*'],
+    add_to_cleanup => ['Date-Holidays-CH-*'],
     create_makefile_pl => 'traditional',
     meta_merge => {
         resources => {
-            repository => 'git://github.com/rainboxx/Date-Holidays-AT.git',
-            homepage   => 'http://github.com/rainboxx/Date-Holidays-AT/',
-            bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Date-Holidays-AT',
+            repository => 'git://github.com/mherrmann/Date-Holidays-CH.git',
+            homepage   => 'http://github.com/mherrmann/Date-Holidays-CH/',
+            bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Date-Holidays-CH',
         }
     },
 );
